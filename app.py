@@ -28,7 +28,7 @@ with st.sidebar:
         st.title("Tire Quality Detection")
         st.write("This software accurately detects the quality of tires of any vehicle.")
 
-        st.sidebar.info("The detection is performed with the help of MobileNet V3 and is faster and lighter than its competitors")
+        st.sidebar.info("The detection is performed with the help of ResNet-50 and MobileNet V3 and is faster and lighter than its competitors")
 
              
         
@@ -42,7 +42,7 @@ def prediction_cls(prediction):
 
     
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
+
 @st.cache(allow_output_mutation=True)
 def load_model():
     model=tf.keras.models.load_model('tire.h5')
